@@ -1,0 +1,20 @@
+namespace LeetCode
+{
+    public class Solution
+    {
+        public bool IsSubsequence(string s, string t)
+        {
+            int i = 0, j = 0;
+            while (i < s.Length && j < t.Length) 
+            { 
+                char check = s[i];
+                if (check == t[j])
+                    i++;
+
+                j++;
+            }
+
+            return i == s.Length;
+        }
+    }
+}
